@@ -1,3 +1,5 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurine:17-jre-alipne
+WORKDIR /app
 COPY target/helloapp.war helloapp.war
-ENTRYPOINT ["java","-jar","/helloapp.war"]
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/helloapp.jar"]
