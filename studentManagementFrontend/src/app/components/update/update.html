@@ -1,0 +1,39 @@
+<div>
+    <div>
+        <label>Student ID</label>
+        <input type="text" #sid>
+        <button type="submit" (click)="getStudentById(sid.value)">Find Student</button>
+    </div>
+    <div>
+        <h1>Update Student</h1>
+    </div>
+    <div>
+        <form [formGroup]="studentForm" (ngSubmit)="updateStudent()">
+            <div>
+                <label class="form-label">Student ID</label>
+                <input type="number" class="form-control" formControlName="sid" readonly>
+            </div>
+            <div>
+                <label class="form-label">Student Name</label>
+                <input type="text" class="form-label" formControlName="sname">
+                <div *ngIf="studentForm.get('sname')?.touched && studentForm.get('sname')?.invalid" class="text-danger">
+                    <div *ngIf="studentForm.get('sname')?.errors?.['required']">Student name is required</div>
+                    <div *ngIf="studentForm.get('sname')?.errors?.['minLength']">Student name is should be minimum 3 characters</div>
+                </div>
+            </div>
+            <div>
+                <label class="form-label">Course</label>
+                <input type="text" class="form-label" formControlName="course">
+                <div *ngIf="studentForm.get('course')?.touched && studentForm.get('course')?.invalid" class="text-danger">
+                    <div *ngIf="studentForm.get('course')?.errors?.['required']">Course is required</div>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" [ngClass]="studentForm.valid? 'btn btn-danger' : 'btn btn-success'">Update Student</button>
+            </div>
+ 
+        </form>
+    </div>
+</div>
+ 

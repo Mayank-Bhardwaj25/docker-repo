@@ -1,0 +1,30 @@
+<div>
+<h1>Demo On Directives</h1>
+
+ <!-- <h1 *ngIf=isLoggedIn>Welcome</h1>
+<h1 *ngIf=!isLoggedIn>GoodBye</h1>
+<button  class = "btn btn-warning" (click)="login()">Login</button>
+<button class = "btn btn-warning" (click) ="logout()">LogOut</button>
+ -->
+
+<!-- <ul>
+    <li *ngFor="let name of names">{{name|uppercase}}</li>
+
+</ul> -->
+
+
+<table [ngStyle]="{'border':'3px solid black'}">
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Course</th>
+</tr>
+
+    <tr *ngFor="let s of students">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.course}}</td>
+
+    </tr>
+</table>
+</div>

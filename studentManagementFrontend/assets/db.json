@@ -1,0 +1,31 @@
+{
+  "students": [
+    {
+      "sid": 1,
+      "name": "Mayank",
+      "course": "java",
+      "id": "0U_mCICi9dU"
+    },
+
+    {
+      "sid": 2,
+      "name": "Rajat",
+      "course": "Angular",
+      "id": "OeSVP2oYWls"
+    },
+    
+    {
+      "sid": 3,
+      "name": "Gaurav",
+      "course": "React",
+      "id": "wn-jqfisyGM"
+    },
+    {
+      "id": "bpVMA5P5C0M",
+      "sname": "Yatharth",
+      "course": "Machine Learning"
+    }
+  ],
+
+  "$schema": "./node_modules/json-server/schema.json"
+}

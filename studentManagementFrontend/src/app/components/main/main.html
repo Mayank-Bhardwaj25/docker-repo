@@ -1,0 +1,28 @@
+<div>
+
+    <h1 class="text-center">
+        Login Form
+    </h1>
+
+
+    <form>
+  <div class="mb-3">
+    <label for="Username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="Username" name="username"
+    [(ngModel)]="username"
+     placeholder="Enter Username">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Password</label>
+    <input type="password" class="form-control" id="pwd" name="password" 
+    [(ngModel)]="password"
+    placeholder="Enter Paaword">
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-5" (click)="login()">Submit</button>
+</form>
+</div>
+
+{{username}}|{{password}}
