@@ -1,5 +1,5 @@
-FROM eclipse-temurine:17-jre-alipne
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY target/helloapp.war helloapp.war
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/helloapp.jar"]
+ENTRYPOINT ["java","-jar","/app/helloapp.war"]
